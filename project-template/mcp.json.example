@@ -1,0 +1,9 @@
+{
+  "// note": "Rename this file to .mcp.json and place it at your repo root to enable the Playwright MCP for that project. Or add it globally with: claude mcp add playwright -- npx @playwright/mcp@latest",
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    }
+  }
+}
