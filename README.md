@@ -34,6 +34,14 @@ project-template/           -> use once PER REPO you work in
   CLAUDE.md                copy to <repo>/CLAUDE.md and fill in
   verify.mjs               copy to <repo>/.claude/verify.mjs and adapt
   mcp.json.example         optional: Playwright browser MCP (see below)
+
+skills/                     -> optional: copy any folder into ~/.claude/skills/
+  qa/                      systematic QA pass over a web app
+  review/                  pre-landing diff review (security, structure)
+  ship/                    merge main, test, review, version bump, push, open PR
+  retro/                   weekly engineering retrospective from git history
+  plan-ceo-review/         review a plan at the product/strategy level
+  plan-eng-review/         review a plan at the engineering level
 ```
 
 ## Setup (about 5 minutes)
@@ -73,6 +81,14 @@ In each repo you work in:
    commands to match the stack (lint/test/build).
 
 That's it.
+
+### 3. Optional: skills
+
+Skills are reusable workflows you trigger with a slash command (e.g. `/ship`,
+`/review`). To install one, copy its folder from `skills/` into `~/.claude/skills/`,
+then invoke it by name in Claude Code. They're independent — take only the ones you
+want. `ship` assumes the repo has a `VERSION` file and `CHANGELOG`; adapt it if yours
+doesn't.
 
 ## How to actually use it
 
